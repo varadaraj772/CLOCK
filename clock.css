@@ -122,5 +122,6 @@ body {
     width: 90vw;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 }
