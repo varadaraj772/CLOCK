@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="clock.css" />
+    <script src="clock.js"></script>
+  </head>
+  <body>
+    <div id="clock" class="container">
+      <div class="tbox">
+        <span id="ih" class="ih"></span>
+        <span id="im" class="im"></span>
+        <span id="ampm"></span>
+      </div>
+      <div class="dbox">
+        <span id="i4" class="i4"></span>
+        <span id="i2" class="i2"></span>
+        <span id="i5" class="i5"></span>
+      </div>
+      <div class="wbox"><div id="i3" class="i3"></div></div>
+    </div>
+    <div class="btns" id="btns">
+      <button id="timerbtn">TIMER</button>
+      <button id="stopwatchbtn" onclick="window.location='stopwatch.html'">
+        STOPWATCH
+      </button>
+    </div>
+  </body>
+</html>

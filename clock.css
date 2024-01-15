@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap");
+
+body {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: antiquewhite;
+  height: 50vh;
+  width: 30vw;
+  border: 2px solid yellow;
+  border-radius: 10px;
+}
+.tbox {
+  font-size: 6rem;
+  font-family: "Orbitron", sans-serif;
+  color: antiquewhite;
+}
+.dbox {
+  font-size: 30px;
+  font-family: "Exo 2", sans-serif;
+}
+.wbox {
+  font-size: 25px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+}
+#ampm {
+  font-size: large;
+  font-family: "Orbitron", sans-serif;
+}
+.btns {
+  color: antiquewhite;
+  padding: 10px;
+}
+@media screen and (max-width: 850px) {
+  .container {
+    font-size: 4rem;
+    height: 60vh;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+  }
+}
