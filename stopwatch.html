@@ -17,8 +17,14 @@
         padding-bottom: -10%;
         text-align: center;
       }
-      .container {
-        width: 35vw;
+      @media screen and (max-width: 850px) {
+        .container {
+          font-size: 4rem;
+          height: 60vh;
+          width: 90vw;
+          justify-content: center;
+          align-items: center;
+        }
       }
     </style>
   </head>
@@ -28,14 +34,35 @@
         <span id="i1" class="i1">00:00:00:00</span>
       </div>
       <div class="btns1">
-        <button onclick="starts()" id="start_btn">Start</button>
-        <button onclick="stops()" id="stop_btn">Stop</button>
-        <button onclick="resets()" id="reset_btn">Reset</button>
+        <button onclick="starts()" id="start_btn" class="button-37">
+          Start
+        </button>
+        <button
+          onclick="stops()"
+          id="stop_btn"
+          class="button-37"
+          style="background-color: red; border: red"
+        >
+          Stop
+        </button>
+        <button
+          onclick="resets()"
+          id="reset_btn"
+          class="button-37"
+          style="background-color: lightseagreen; border: lightseagreen"
+        >
+          Reset
+        </button>
       </div>
     </div>
     <div class="btns" id="btns">
-      <button id="timerbtn">TIMER</button>
-      <button id="clockbtn" onclick="window.location='index.html'">
+      <button id="timerbtn" class="button-30" role="button">TIMER</button>
+      <button
+        id="clockbtn"
+        class="button-30"
+        role="button"
+        onclick="window.location='index.html'"
+      >
         CLOCK
       </button>
     </div>
