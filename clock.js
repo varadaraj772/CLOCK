@@ -26,12 +26,11 @@ function updateClock() {
   ];
   var hr = date.getHours();
   var min = date.getMinutes();
-  var sec = date.getSeconds();
   var mer = hr >= 12 ? "PM" : "AM";
+  hr = hr % 12;
   if (hr == 0) {
     hr = 12;
   } else {
-    hr = hr % 12;
     if (hr < 10) {
       hr = "0" + hr;
     }

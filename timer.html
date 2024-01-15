@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="clock.css" />
-    <script src="stopwatch.js"></script>
+    <script src="timer.js"></script>
     <style>
       .tbox {
         font-size: 2.5rem;
@@ -17,6 +17,17 @@
         padding-bottom: -10%;
         text-align: center;
       }
+      input[type="text"] {
+        width: 10%;
+        border: 2px solid yellow;
+        background-color: black;
+        border-radius: 8px;
+        color: antiquewhite;
+      }
+      .input-group {
+        padding: 10%;
+      }
+
       @media screen and (max-width: 850px) {
         .container {
           font-size: 4rem;
@@ -26,19 +37,38 @@
           align-items: center;
         }
       }
+      @media screen and (max-width: 750px) {
+        .input-group {
+          padding: 20px;
+          font-size: 1rem;
+        }
+        input[type="text"] {
+          width: 10%;
+        }
+      }
     </style>
   </head>
   <body>
     <div id="clock" class="container">
+      <div class="input-group">
+        <label for="hoursInput">Hours:</label>
+        <input type="text" id="hoursInput" placeholder="0" />
+
+        <label for="minutesInput">Minutes:</label>
+        <input type="text" id="minutesInput" placeholder="0" />
+
+        <label for="secondsInput">Seconds:</label>
+        <input type="text" id="secondsInput" placeholder="0" />
+      </div>
       <div class="tbox">
-        <span id="i1" class="i1">00:00:00:00</span>
+        <span id="i1" class="i1">00:00:00</span>
       </div>
       <div class="btns1">
-        <button onclick="starts()" id="start_btn" class="button-37">
+        <button onclick="start()" id="start_btn" class="button-37">
           Start
         </button>
         <button
-          onclick="stops()"
+          onclick="stopt()"
           id="stop_btn"
           class="button-37"
           style="background-color: red; border: red"
@@ -46,7 +76,7 @@
           Stop
         </button>
         <button
-          onclick="resets()"
+          onclick="reset()"
           id="reset_btn"
           class="button-37"
           style="background-color: lightseagreen; border: lightseagreen"
@@ -57,12 +87,12 @@
     </div>
     <div class="btns" id="btns">
       <button
-        id="timerbtn"
+        id="stopwatchbtn"
         class="button-30"
         role="button"
-        onclick="window.location='timer.html'"
+        onclick="window.location='stopwatch.html'"
       >
-        TIMER
+        STOPWATCH
       </button>
       <button
         id="clockbtn"
@@ -73,5 +103,8 @@
         CLOCK
       </button>
     </div>
+    <audio id="beep">
+      <source src="alarm-clock-short-6402.mp3" type="audio/mp3" />
+    </audio>
   </body>
 </html>
